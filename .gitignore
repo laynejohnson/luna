@@ -137,3 +137,13 @@ Dependencies/
 Luna/art.scnassets/LunaMoth.scn
 LunaMoth.obj
 LunaMoth.scn
+LunaMoth.fbx
+LunaMoth.blend
+Lunamoth.max
+Lunamoth.dae
+
+#Textures#
+T_LunaMoth_D.png
+T_LunaMoth_N.png
+T_LunaMothWings_D.png
+T_LunaMothWings_N.png
