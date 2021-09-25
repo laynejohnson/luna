@@ -22,11 +22,38 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        // Create geometry
+        let cube = SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0.01)
         
-        // Set the scene to the view
-        sceneView.scene = scene
+        // Create material
+        let material = SCNMaterial()
+        
+        // Style material
+        material.diffuse.contents = UIColor.yellow
+        
+        // Assign material to cube
+        cube.materials = [material]
+        
+        // Create node (point in 3D space)
+        let node = SCNNode()
+        
+        // Position node
+        node.position = SCNVector3(0.5, 0.1, -0.5)
+        
+        // Assign cube geometry to node
+        node.geometry = cube
+        
+        // Add child node to root node
+        sceneView.scene.rootNode.addChildNode(node)
+        
+        // Add automatic lighting
+        sceneView.automaticallyUpdatesLighting = true
+        
+//        // Create a new scene
+//        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+//
+//        // Set the scene to the view
+//        sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +68,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             sceneView.session.run(configuration)
             
         } else {
-            print("This device does not support ARWorldTracking Immersive Configuration")
+            print("This device does not support ARWorldTrackingConfiguration. ")
         }
     }
     
