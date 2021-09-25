@@ -131,3 +131,8 @@ Dependencies/
  !*.xcodeproj/xcshareddata/
  !*.xcworkspace/contents.xcworkspacedata
  **/xcshareddata/WorkspaceSettings.xcsettings
+
+#Luna Moth Model#
+
+LunaMoth.obj
+LunaMoth.scn
