@@ -22,17 +22,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
-        // Create geometry
-        let cube = SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0.01)
+        // Create sphere geometry
+        let sphere = SCNSphere(radius: 0.2)
         
         // Create material
         let material = SCNMaterial()
         
         // Style material
-        material.diffuse.contents = UIColor.yellow
+        material.diffuse.contents = UIImage(named: "art.scnassets/Texture Maps/8k_moon.jpeg")
         
         // Assign material to cube
-        cube.materials = [material]
+        sphere.materials = [material]
         
         // Create node (point in 3D space)
         let node = SCNNode()
@@ -41,7 +41,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         node.position = SCNVector3(0.5, 0.1, -0.5)
         
         // Assign cube geometry to node
-        node.geometry = cube
+        node.geometry = sphere
         
         // Add child node to root node
         sceneView.scene.rootNode.addChildNode(node)
