@@ -32,11 +32,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
+        if ARWorldTrackingConfiguration.isSupported {
+            
+            // Create a session configuration
+            let configuration = ARWorldTrackingConfiguration()
 
-        // Run the view's session
-        sceneView.session.run(configuration)
+            // Run the view's session
+            sceneView.session.run(configuration)
+            
+        } else {
+            print("This device does not support ARWorldTracking Immersive Configuration")
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -72,3 +78,4 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
 }
+   

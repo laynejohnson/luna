@@ -13,6 +13,7 @@
 		E8D3D32326FE517A00C3CDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D3D32126FE517A00C3CDB0 /* Main.storyboard */; };
 		E8D3D32526FE517C00C3CDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D3D32426FE517C00C3CDB0 /* Assets.xcassets */; };
 		E8D3D32826FE517C00C3CDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D3D32626FE517C00C3CDB0 /* LaunchScreen.storyboard */; };
+		E8D3D33026FE52D400C3CDB0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E8D3D32F26FE52D400C3CDB0 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E8D3D32426FE517C00C3CDB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8D3D32726FE517C00C3CDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8D3D32926FE517C00C3CDB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8D3D32F26FE52D400C3CDB0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		E8D3D30F26FE517A00C3CDB0 = {
 			isa = PBXGroup;
 			children = (
+				E8D3D32F26FE52D400C3CDB0 /* README.md */,
 				E8D3D31A26FE517A00C3CDB0 /* Luna */,
 				E8D3D31926FE517A00C3CDB0 /* Products */,
 			);
@@ -57,11 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				E8D3D31B26FE517A00C3CDB0 /* AppDelegate.swift */,
-				E8D3D31D26FE517A00C3CDB0 /* art.scnassets */,
-				E8D3D31F26FE517A00C3CDB0 /* ViewController.swift */,
-				E8D3D32126FE517A00C3CDB0 /* Main.storyboard */,
-				E8D3D32426FE517C00C3CDB0 /* Assets.xcassets */,
 				E8D3D32626FE517C00C3CDB0 /* LaunchScreen.storyboard */,
+				E8D3D32126FE517A00C3CDB0 /* Main.storyboard */,
+				E8D3D31F26FE517A00C3CDB0 /* ViewController.swift */,
+				E8D3D31D26FE517A00C3CDB0 /* art.scnassets */,
+				E8D3D32426FE517C00C3CDB0 /* Assets.xcassets */,
 				E8D3D32926FE517C00C3CDB0 /* Info.plist */,
 			);
 			path = Luna;
@@ -126,6 +129,7 @@
 			files = (
 				E8D3D31E26FE517A00C3CDB0 /* art.scnassets in Resources */,
 				E8D3D32826FE517C00C3CDB0 /* LaunchScreen.storyboard in Resources */,
+				E8D3D33026FE52D400C3CDB0 /* README.md in Resources */,
 				E8D3D32526FE517C00C3CDB0 /* Assets.xcassets in Resources */,
 				E8D3D32326FE517A00C3CDB0 /* Main.storyboard in Resources */,
 			);
