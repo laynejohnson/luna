@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Luna_app_icon.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

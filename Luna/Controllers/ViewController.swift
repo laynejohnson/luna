@@ -10,7 +10,7 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
-
+    
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -20,7 +20,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        //        sceneView.showsStatistics = true
         
         // Create sphere geometry
         let sphere = SCNSphere(radius: 0.2)
@@ -49,11 +49,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Add automatic lighting
         sceneView.automaticallyUpdatesLighting = true
         
-//        // Create a new scene
-//        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-//
-//        // Set the scene to the view
-//        sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,13 +56,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         if ARWorldTrackingConfiguration.isSupported {
             
+            print("Success! This device supports ARWorldTrackingConfiguration")
+            
             // Create a session configuration
             let configuration = ARWorldTrackingConfiguration()
-
+            
             // Run the view's session
             sceneView.session.run(configuration)
             
         } else {
+            
             print("This device does not support ARWorldTrackingConfiguration. ")
         }
     }
@@ -78,17 +76,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
-
+    
     // MARK: - ARSCNViewDelegate
     
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
+    /*
+     // Override to create and configure nodes for anchors added to the view's session.
+     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+     let node = SCNNode()
      
-        return node
-    }
-*/
+     return node
+     }
+     */
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
@@ -105,4 +103,3 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
 }
-   
